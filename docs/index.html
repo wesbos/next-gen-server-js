@@ -1,282 +1,414 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    
+    
+    <link rel="icon" href="https://fav.farm/👨‍💻" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    
+    <script type="module" crossorigin src="/next-gen-server-js/assets/index.b204f0d7.js"></script>
+    <link rel="stylesheet" href="/next-gen-server-js/assets/index.ac6b9705.css">
+  </head>
 
-<head>
-  <title>Tasty TypeScript</title>
-  <meta charset="utf-8">
-  
-  
-  <link rel="icon" href="https://fav.farm/👨‍💻" />
-  <script type="module" crossorigin src="/typescript-talk/assets/index.9f1cde86.js"></script>
-  <link rel="stylesheet" href="/typescript-talk/assets/index.14183f4c.css">
-</head>
+  <body>
+    <section class="slides layout-regular template-default">
+      <article>
+        <div id="trunk"></div>
+        <h1>Next-Gen<br />Serverside<br />JavaScript!</h1>
+      </article>
 
-<body>
-  <section class="slides layout-regular template-default">
+      <article>
+        <h1>
+          <mark>Hi, I&apos;m<br />Wes Bos</mark>
+        </h1>
+        <p class="sub">Hamilton, On 🇨🇦</p>
+        <p class="sub">@wesbos.com on bluesky</p>
+      </article>
+      <article class="first">
+        <img
+          src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
+        />
+        <p>syntax.fm × @syntaxfm</p>
+      </article>
 
-    <article>
-      <h1>Tasty<br>TypeScript!</h1>
-      <p>It's pretty good!</p>
-    </article>
+      <article>
+        <h1>What is this talk about?</h1>
+        <p class="sub">Server Side JavaScript</p>
+      </article>
 
-    <article>
-      <h1><mark>Hi, I&apos;m<br>Wes Bos</mark></h1>
-      <p class="sub">Hamilton, On 🇨🇦</p>
-      <p class="sub">@wesbos Tweet, tok and gram</p>
-    </article>
-    <article class="first"><img src="https://syntax.fm/static/logo.png">
-      <p class="sub">Trice Weekly!</p>
-    </article>
+      <article>
+        <h1>JavaScript Runtimes</h1>
+        <p>Engines + APIS === Runtime</p>
+      </article>
 
-    <article>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"
-        alt="">
-    </article>
-
-    <article>
-      <div class="build">
-        <h2>What is TypeScript?</h2>
-        <p>TypeScript is JavaScript with a Type system added on top.</p>
-
-        <p>It's not really a new language, it's just JavaScript plus some descriptions about what your data looks like.
+      <article class="browsers">
+        <style>
+          .browsers img {
+            max-width: 100px;
+            margin: 0 1rem;
+          }
+        </style>
+        <p>
+          V8 → <img src="/next-gen-server-js/assets/chrome.c24bb399.svg" /><img
+            src="/next-gen-server-js/assets/edge.8f192af5.png"
+          /><img src="/next-gen-server-js/assets/chromium.6b58ab47.png" />
         </p>
+        <p>Spider Monkey → <img src="/next-gen-server-js/assets/firefox.a215097d.png" /></p>
+        <p>JavaScriptCore → <img src="/next-gen-server-js/assets/safari.9d723a4b.png" /></p>
+      </article>
 
-        <p>They really should have called it DescriptiveJavaScript!</p>
-      </div>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
+        <h3>Node.js</h3>
+        <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+      </article>
 
-    <article>
-      <h1>First, What are Types?</h1>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
+        <h3>Deno</h3>
+        <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+      </article>
 
-    <article>
-      <p class="">Types describe the <span class="hl">type</span> of data in your application.</p>
-      <div class="build">
-        <p>Wes, you just used the word to describe the word.</p>
-      </div>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
+        <h3>Cloudflare Workers</h3>
+        <img src="./icons/v8.jpg" alt="" />
+      </article>
 
-    <article class="fill"><img src="/typescript-talk/assets/basic.181e8f94.png" class="wide"></article>
+      <article class="grid">
+        <img src="/next-gen-server-js/assets/bloomberg.4ffcc6f7.png" />
+        <img src="/next-gen-server-js/assets/bytedance.039c017e.png" />
+        <img src="/next-gen-server-js/assets/alibaba.99a834f3.png" />
+      </article>
 
-    <article class="fill"><img src="/typescript-talk/assets/string-array.02f5a2a7.png" class="wide">
-      <p>An array of strings, not really that complex 😆</p>
-    </article>
+      <article>
+        <h1>So if my math is correct...</h1>
+      </article>
 
-    <article><img src="/typescript-talk/assets/custom-type.c75bf2f8.png" alt="" class="high"></article>
+      <article>
+        <h2>3 Browser JS Runtimes</h2>
+        <img src="/next-gen-server-js/assets/chrome.c24bb399.svg" />
+        <img src="/next-gen-server-js/assets/firefox.a215097d.png" />
+        <img src="/next-gen-server-js/assets/safari.9d723a4b.png" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/libs.4ed2441e.png" alt="" class="wide"></article>
+      <article>
+        <h2>4+ Server JS Runtimes</h2>
+        <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
+        <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
+        <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
+        <img src="/next-gen-server-js/assets/bun.6395a2d7.svg" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/func.62f45f95.png" alt="" class="wide"></article>
+      <article>
+        <img src="/next-gen-server-js/assets/ie6.3feacc2f.jpg" alt="" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/func.62f45f95.png" alt="" class="wide"></article>
+      <article>
+        <h1>WHY</h1>
+      </article>
 
-    <article><img src="/typescript-talk/assets/func2.8e1ca028.png" alt="" class="wide"></article>
+      <article>
+        <h2>Better</h2>
+        <ul class="build">
+          <li>TS out of the Box</li>
+          <li>A push for Standard APIs</li>
+          <li>ESM Spec</li>
+          <li>Easy wins (dotenv, prompt, etc..)</li>
+        </ul>
+      </article>
 
-    <article>
-      <h1>But why?<br>What good is this extra <span class="hl">typing</span>?</h1>
-    </article>
+      <article>
+        <h2>Faster</h2>
+        <img src="/next-gen-server-js/assets/ryah.91766851.jpg" alt="" />
+      </article>
 
-    <article>
-      <h1 class="">TypeScript<br><span class="hl">Benefits</span></h1>
-    </article>
+      <article>
+        <h2>Stronger</h2>
+        <img src="/next-gen-server-js/assets/security.3582845a.jpg" class="wide" />
+      </article>
 
-    <article>
-      <h4 class="hl">TypeScript has two main benefits:</h4>
+      <article>
+        <h1>Server Kinds</h1>
+      </article>
 
-      <ol>
-        <li>code authoring experience<br>(more fun!)</li>
-        <li>More resiliant codebase(less bugs!)</li>
-      </ol>
+      <article>
+        <h3>Traditional VM / Long Running Server</h3>
+        <ul class="build">
+          <li>Always running</li>
+          <li>Maintain Memory</li>
+          <li>Scaling up via Memory/CPU</li>
+          <li>Scaling up via more servers</li>
+          <!-- TODO Examples -->
+        </ul>
+      </article>
 
-      <p>Let's break these down into some real world examples</p>
-    </article>
+      <article>
+        <h2>Serverless Functions</h2>
+        <ul class="build">
+          <li>Only Run when needed</li>
+          <li>Scale up by running more</li>
+          <li>Pay for what you need</li>
+        </ul>
+        <!-- TODO Examples -->
+      </article>
 
-    <article>
-      <p class="hl">Benefit #1</p>
-      <h1>Amazing <span class="hl">Autocomplete</span> & Developer <span class="hl">Productivity</span></h1>
-    </article>
+      <article>
+        <h2>Edge Functions</h2>
+        <ul class="build">
+          <li>Run closer to your user</li>
+          <li>Can run in-between / intercept requests</li>
+          <li>Limited API</li>
+          <li>Not 100% node compat</li>
+          <li>CPU Time vs Wall Time</li>
+        </ul>
+        <!-- TODO Examples -->
+      </article>
 
-    <article><img src="/typescript-talk/assets/object-typing.0bcf817c.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/func-using.d9f84495.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/method.ba6b06cc.png" alt="" class="wide"></article>
+      <article>
+        <div class="build">
+          <h2>What is TypeScript?</h2>
+          <p>TypeScript is JavaScript with a Type system added on top.</p>
+          <p>
+            It's not really a new language, it's just JavaScript plus some
+            descriptions about what your data looks like.
+          </p>
+          <p>They really should have called it DescriptiveJavaScript!</p>
+        </div>
+      </article>
 
-    <article>
-      <p class="hl">Benefit #2</p>
-      <h1>Error <span class="hl">Detection</span></h1>
-    </article>
+      <article>
+        <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
+        <p class="build">well, ya. That's the idea for the future at least!</p>
+      </article>
 
-    <article><img src="/typescript-talk/assets/oops.65caeb06.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/missing.8db365ac.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/add-missing.0bccd216.png" alt="" class="wide"></article>
+      <article>
+        <img src="/next-gen-server-js/assets/js.48d02175.png" alt="" />
+      </article>
 
+      <article>
+        <h2>Web Standards</h2>
+        <div>
+          <div>
+            <img src="/next-gen-server-js/assets/tc39.de2fa905.svg" alt="" />
+            <p>TC39</p>
+            <p>Async + Await, esm, const, arrow functions</p>
+          </div>
+          <div>
+            <img src="./icons/w3c.png" alt="" />
+            <p>W3C</p>
+            <p>WebRTC, Streams API, Web Components</p>
+          </div>
+          <div>
+            <img src="./icons/whatwg.png" alt="" />
+            <p>WHATWG</p>
+            <p>Fetch, Service Workers, Resize Observer</p>
+          </div>
+        </div>
+      </article>
 
-    <article>
-      <p class="hl">Benefit #3</p>
-      <h1><span class="hl">Library</span><br>Typing</h1>
-    </article>
-    <article><img src="/typescript-talk/assets/npm.8b8e18d9.png" alt="" class="wide"></article>
-    <article>
-      <img src="/typescript-talk/assets/react.7afca67a.png" alt="" class="wide">
-      <p><code>npm i @types/react</code></p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/node-fetch.891221d5.png" alt="" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/date-fns.5e356eb6.png" alt="" class="wide"></article>
+      <article>
+        <img src="/next-gen-server-js/assets/fetch-standard.ac2b2be7.png" alt="" />
+      </article>
 
-    <article>
-      <p class="hl">Benefit #4</p>
-      <h1><span class="hl">Database</span><br>Typing</h1>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/wintergc.68ce46e7.png" alt="" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/prisma.f85f2310.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/prisma2.8ddf6ba1.png" alt="" class="wide"></article>
+      <article>
+        <h2>Browser JS is Server JS</h2>
+        <p>JS is JS</p>
+        <p>We don't need different ways to do the same thing</p>
+        <p>Let's look at some of those standards</p>
+      </article>
 
-    <article>
-      <p class="hl">Benefit #5</p>
-      <h1><span class="hl">Refactoring</span><br>is a breeze</h1>
-    </article>
+      <article>
+        <h1>Fetch</h1>
+        <p>Request + Response are life</p>
+      </article>
 
-    <article>
-      <video class="wide" src="/typescript-talk/assets/export-to-constant.2022564a.mp4" muted autoplay loop></video>
-    </article>
-    <article><img src="/typescript-talk/assets/move-to-new.f9a8aba1.png" alt="" class="wide"></article>
+      <article>
+        <h2>In the Browser, We send Requests</h2>
+        <img src="/next-gen-server-js/assets/request.4965cadf.png" alt="" />
+      </article>
+      <article>
+        <h2>On the Server, we handle them!</h2>
+        <img src="/next-gen-server-js/assets/req2.560305ef.png" alt="" />
+      </article>
+      <article>
+        <img src="/next-gen-server-js/assets/requests.a26b3df4.png" alt="" />
+      </article>
 
+      <article>
+        <h1>Node</h1>
+        <p>Not Native, But:</p>
+        <p>Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
+      </article>
 
-    <article>
-      <p class="hl">Benefit #6</p>
-      <h1>Edge case detection</h1>
-    </article>
-    <article><img src="/typescript-talk/assets/edge-case.79c7f07a.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/edge2.4065b197.png" alt="" class="wide"></article>
+      <article>
+        <h1>Streams</h1>
+        <p>Blow Chunks as you have em</p>
+      </article>
 
-    <article>
-      <h1>Some important Concepts in <span class="hl">TS</span></h1>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/streams.b97c6fc4.png" alt="" />
+      </article>
+      <article>
+        <img src="/next-gen-server-js/assets/abort.4accac27.png" alt="" />
+      </article>
 
-    <article>
-      <h1>any <span class="hl">vs</span> unknown</h1>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/abort-server.e87a3f36.png" alt="" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/any1.efb43085.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/any2.c984942d.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/any3.14e67009.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/any4.e2bef8d9.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/any5.8fd9dee8.png" alt="" class="wide"></article>
+      <article>
+        <img src="/next-gen-server-js/assets/react-streams.6625a33a.png" alt="" />
+      </article>
 
-    <article>
-      <h1>Implicit <span class="hl">vs</span> Explict</h1>
-      <p>Kind of important to know</p>
-    </article>
+      <article>
+        <h1>Events!</h1>
+        <p>Listen for events on anything!</p>
+      </article>
 
-    <article>
-      <p>Lots of things in TypeScript don't need to be typed.</p>
-      <p class="hl">They can be implied.</p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/event1.f8d1fe83.png" alt="" />
+      </article>
 
-    <article><img src="/typescript-talk/assets/im.ce3c5ed4.png" alt="" class="wide"></article>
-    <article><img src="/typescript-talk/assets/sammy.7264bef4.png" alt="" class="wide"></article>
+      <article>
+        <img src="/next-gen-server-js/assets/event2.40f221cc.png" alt="" />
+        <!-- Node, DEno, vbun -->
+        <!-- Cloudflare fetch, scheduled and queue -->
+      </article>
 
-    <article>
-      <ul class="build">
-        <li><span class="hl">Implicit</span> is OK for private and local variables.</li>
-        <li>It's good to let things be <span class="hl">inferred</span> when possible</li>
-        <li><span class="hl">Explicit</span> for function inputs and outputs</li>
-        <li><span class="hl">Explicit</span> for anything exported or public</li>
-      </ul>
-    </article>
+      <article>
+        <h1>Form Data</h1>
+      </article>
 
-    <article>
-      <h1>Tooling</h1>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/formData.536bad41.png" alt="" />
+      </article>
 
-    <article>
-      <h1><span class="hl">Type Checking</span><br>and<br><span class="hl">Compiling to JS</span></h1>
-    </article>
+      <article>
+        <h1>Web Workers</h1>
+        <ul class="build">
+          <li>Multi Threaded / Parallel</li>
+          <li>CPU intensive tasks</li>
+          <li>Non-blocking</li>
+        </ul>
+      </article>
 
-    <article>
-      <h1>TSC</h1>
-      <p>Type Checks ✅</p>
-      <p>Compiles to JS ✅</p>
-    </article>
+      <article>
+        <h1>Service Workers-ish</h1>
+        <p>Intercepting Requests</p>
+      </article>
 
-    <article>
-      <h1>SWC</h1>
-      <p>Type Checks ❌</p>
-      <p>Compiles to JS ✅</p>
-      <p>Rust Based</p>
-      <p>Fast as heck</p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/stream-replace.16eb6d37.png" alt="" />
+      </article>
 
-    <article>
-      <h1>esbuild</h1>
-      <p>Type Checks ❌</p>
-      <p>Compiles to JS ✅</p>
-      <p>Go Based</p>
-      <p>Fast as heck</p>
-    </article>
+      <article>
+        <ul class="build">
+          <li>Easy Proxy!</li>
+          <li>Add custom CSS to a SASS</li>
+          <li>Migrate Slowly</li>
+        </ul>
+      </article>
 
-    <article>
-      <h1>vite</h1>
-      <p>uses esbuild</p>
-      <p>Does everything</p>
-      <p>dev server, live reloader, bundler, css, frameworks..</p>
-    </article>
+      <article>
+        <h1>alert()<br />prompt()<br />confirm()</h1>
+      </article>
 
-    <article>
-      <h1>parcel</h1>
-      <p>uses swc</p>
-      <p>Does everything</p>
-      <p>dev server, live reloader, bundler, css, frameworks..</p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/alert.b6124ec8.png" alt="" />
+      </article>
+      <article>
+        <img src="/next-gen-server-js/assets/alert-output.59dde5ca.png" alt="" />
+      </article>
 
-    <article>
-      <h1>What to use?</h1>
-      <p>For most projects, use vite or parcel</p>
-      <p>Tooling is SO GOOD right now</p>
-    </article>
+      <article>
+        <h1>Import Protocols</h1>
+      </article>
 
-    <article>
-      <h1>serverside</h1>
-    </article>
+      <article>
+        <h1>AsyncLocalStorage</h1>
+        <p>Really cool new API</p>
+      </article>
 
-    <article>
-      <h1>Node</h1>
-      <p><span class="hl">tsx</span> uses esbuild</p>
-      <p><span class="hl">ts-node</span> uses tsc. Also has a --swc</p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/als.40681a80.png" alt="" />
+      </article>
 
-    <article>
-      <img src="/typescript-talk/assets/deno.0e4d5799.png" alt="" class="wide">
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/ryan-async.92f7dcb7.png" alt="" />
+      </article>
 
-    <article>
-      <img src="/typescript-talk/assets/bun.d1dda5be.png" alt="" class="wide">
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/async-context.2360f480.png" alt="" />
+      </article>
 
-    <article>
-      <h1>Do we even need <span class="hl">TypeScript</span>?</h1>
+      <article>
+        <h1>Packages</h1>
+        <p>Super Fast</p>
+      </article>
 
-    </article>
+      <article>
+        <h1>import { DOMParser, parseHTML } from 'linkedom/worker';</h1>
+        <p>JSDom Alternative. Works everywhere</p>
+      </article>
 
-    <article>
-      <h2>JSDoc</h2>
-      <img src="/typescript-talk/assets/jsdoc.f25c4f50.png" alt="" class="wide">
-    </article>
-    <article>
-      <img src="/typescript-talk/assets/jsdoc2.25539675.png" alt="" class="wide">
-    </article>
+      <article>
+        <h1>HTMLRewriter</h1>
+        <ul>
+          <li>Cloudflare Invented</li>
+          <li>Re-implemented everywhere</li>
+          <li>Not a standard</li>
+        </ul>
+      </article>
 
-    <article>
-      <img src="/typescript-talk/assets/types-as-comments.a8f4b10a.png" alt="" class="wide">
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/rewriter.728ccbb8.png" alt="" />
+      </article>
 
-    <article>
-      <h1>Neat, <span class="hl">eh</span>?</h1>
-      <p>Thanks</p>
-    </article>
+      <article>
+        <img src="/next-gen-server-js/assets/worker-tools.d43d8ebc.png" alt="" />
+        <a href="https://github.com/worker-tools" target="_blank"
+          >worker-tools</a
+        >
+      </article>
+      <article>
+        <h1>Filesystem</h1>
+        <p>No standard FS API</p>
+        <p>whatwg/fs maybe?</p>
+      </article>
 
+      <article>
+        <h1>So much more!</h1>
+      </article>
 
-  </section>
-</body>
+      <article>
+        <h1>This ins't write once work everywhere</h1>
+        <p>At least not yet...</p>
+      </article>
 
+      <article>
+        <h2>
+          It is a set of standardized APIs that allow us to create
+          interchangeable building blocks.
+        </h2>
+        <p>Servers 🤝 Browsers</p>
+      </article>
+
+      <article>
+        <h1>Thanks</h1>
+        <p>@wesbos</p>
+      </article>
+    </section>
+  </body>
 </html>
