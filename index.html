@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="module" src="./slides.js"></script>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="https://fav.farm/👨‍💻" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <script type="module" src="./go.ts"></script>
+  </head>
+
+  <body>
+    <section class="slides layout-regular template-default">
+      <article>
+        <div id="trunk"></div>
+        <h1>Next-Gen<br />Serverside<br />JavaScript!</h1>
+      </article>
+
+      <article>
+        <h1>
+          <mark>Hi, I&apos;m<br />Wes Bos</mark>
+        </h1>
+        <p class="sub">Hamilton, On 🇨🇦</p>
+        <p class="sub">@wesbos.com on bluesky</p>
+      </article>
+      <article class="first">
+        <img
+          src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
+        />
+        <p>syntax.fm × @syntaxfm</p>
+      </article>
+
+      <article>
+        <h1>What is this talk about?</h1>
+        <p class="sub">Server Side JavaScript</p>
+      </article>
+
+      <article>
+        <h1>JavaScript Runtimes</h1>
+        <p>Engines + APIS === Runtime</p>
+      </article>
+
+      <article class="browsers">
+        <style>
+          .browsers img {
+            max-width: 100px;
+            margin: 0 1rem;
+          }
+        </style>
+        <p>
+          V8 → <img src="./icons/chrome.svg" /><img
+            src="./icons/edge.png"
+          /><img src="./icons/chromium.png" />
+        </p>
+        <p>Spider Monkey → <img src="./icons/firefox.png" /></p>
+        <p>JavaScriptCore → <img src="./icons/safari.png" /></p>
+      </article>
+
+      <article>
+        <img src="./icons/node.png" />
+        <h3>Node.js</h3>
+        <img src="./icons/v8.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/deno.svg" />
+        <h3>Deno</h3>
+        <img src="./icons/v8.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/cloudflare.jpg" />
+        <h3>Cloudflare Workers</h3>
+        <img src="./icons/v8.jpg" alt="" />
+      </article>
+
+      <article class="grid">
+        <img src="./icons/bloomberg.png" />
+        <img src="./icons/bytedance.png" />
+        <img src="./icons/alibaba.png" />
+      </article>
+
+      <article>
+        <h1>So if my math is correct...</h1>
+      </article>
+
+      <article>
+        <h2>3 Browser JS Runtimes</h2>
+        <img src="./icons/chrome.svg" />
+        <img src="./icons/firefox.png" />
+        <img src="./icons/safari.png" />
+      </article>
+
+      <article>
+        <h2>4+ Server JS Runtimes</h2>
+        <img src="./icons/node.png" />
+        <img src="./icons/deno.svg" />
+        <img src="./icons/cloudflare.jpg" />
+        <img src="./icons/bun.svg" />
+      </article>
+
+      <article>
+        <img src="./icons/ie6.jpg" alt="" />
+      </article>
+
+      <article>
+        <h1>WHY</h1>
+      </article>
+
+      <article>
+        <h2>Better</h2>
+        <ul class="build">
+          <li>TS out of the Box</li>
+          <li>A push for Standard APIs</li>
+          <li>ESM Spec</li>
+          <li>Easy wins (dotenv, prompt, etc..)</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Faster</h2>
+        <img src="./icons/ryah.jpg" alt="" />
+      </article>
+
+      <article>
+        <h2>Stronger</h2>
+        <img src="./icons/security.jpg" class="wide" />
+      </article>
+
+      <article>
+        <h1>Server Kinds</h1>
+      </article>
+
+      <article>
+        <h3>Traditional VM / Long Running Server</h3>
+        <ul class="build">
+          <li>Always running</li>
+          <li>Maintain Memory</li>
+          <li>Scaling up via Memory/CPU</li>
+          <li>Scaling up via more servers</li>
+          <!-- TODO Examples -->
+        </ul>
+      </article>
+
+      <article>
+        <h2>Serverless Functions</h2>
+        <ul class="build">
+          <li>Only Run when needed</li>
+          <li>Scale up by running more</li>
+          <li>Pay for what you need</li>
+        </ul>
+        <!-- TODO Examples -->
+      </article>
+
+      <article>
+        <h2>Edge Functions</h2>
+        <ul class="build">
+          <li>Run closer to your user</li>
+          <li>Can run in-between / intercept requests</li>
+          <li>Limited API</li>
+          <li>Not 100% node compat</li>
+          <li>CPU Time vs Wall Time</li>
+        </ul>
+        <!-- TODO Examples -->
+      </article>
+
+      <article>
+        <div class="build">
+          <h2>What is TypeScript?</h2>
+          <p>TypeScript is JavaScript with a Type system added on top.</p>
+          <p>
+            It's not really a new language, it's just JavaScript plus some
+            descriptions about what your data looks like.
+          </p>
+          <p>They really should have called it DescriptiveJavaScript!</p>
+        </div>
+      </article>
+
+      <article>
+        <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
+        <p class="build">well, ya. That's the idea for the future at least!</p>
+      </article>
+
+      <article>
+        <img src="./icons/js.png" alt="" />
+      </article>
+
+      <article>
+        <h2>Web Standards</h2>
+        <div>
+          <div>
+            <img src="./icons/tc39.svg" alt="" />
+            <p>TC39</p>
+            <p>Async + Await, esm, const, arrow functions</p>
+          </div>
+          <div>
+            <img src="./icons/w3c.png" alt="" />
+            <p>W3C</p>
+            <p>WebRTC, Streams API, Web Components</p>
+          </div>
+          <div>
+            <img src="./icons/whatwg.png" alt="" />
+            <p>WHATWG</p>
+            <p>Fetch, Service Workers, Resize Observer</p>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <img src="./icons/node-fetch.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/fetch-standard.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/wintergc.png" alt="" />
+      </article>
+
+      <article>
+        <h2>Browser JS is Server JS</h2>
+        <p>JS is JS</p>
+        <p>We don't need different ways to do the same thing</p>
+        <p>Let's look at some of those standards</p>
+      </article>
+
+      <article>
+        <h1>Fetch</h1>
+        <p>Request + Response are life</p>
+      </article>
+
+      <article>
+        <h2>In the Browser, We send Requests</h2>
+        <img src="./icons/request.png" alt="" />
+      </article>
+      <article>
+        <h2>On the Server, we handle them!</h2>
+        <img src="./icons/req2.png" alt="" />
+      </article>
+      <article>
+        <img src="./icons/requests.png" alt="" />
+      </article>
+
+      <article>
+        <h1>Node</h1>
+        <p>Not Native, But:</p>
+        <p>Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
+      </article>
+
+      <article>
+        <h1>Streams</h1>
+        <p>Blow Chunks as you have em</p>
+      </article>
+
+      <article>
+        <img src="./icons/streams.png" alt="" />
+      </article>
+      <article>
+        <img src="./icons/abort.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/abort-server.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/react-streams.png" alt="" />
+      </article>
+
+      <article>
+        <h1>Events!</h1>
+        <p>Listen for events on anything!</p>
+      </article>
+
+      <article>
+        <img src="./icons/event1.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/event2.png" alt="" />
+        <!-- Node, DEno, vbun -->
+        <!-- Cloudflare fetch, scheduled and queue -->
+      </article>
+
+      <article>
+        <h1>Form Data</h1>
+      </article>
+
+      <article>
+        <img src="./icons/formData.png" alt="" />
+      </article>
+
+      <article>
+        <h1>Web Workers</h1>
+        <ul class="build">
+          <li>Multi Threaded / Parallel</li>
+          <li>CPU intensive tasks</li>
+          <li>Non-blocking</li>
+        </ul>
+      </article>
+
+      <article>
+        <h1>Service Workers-ish</h1>
+        <p>Intercepting Requests</p>
+      </article>
+
+      <article>
+        <img src="./icons/stream-replace.png" alt="" />
+      </article>
+
+      <article>
+        <ul class="build">
+          <li>Easy Proxy!</li>
+          <li>Add custom CSS to a SASS</li>
+          <li>Migrate Slowly</li>
+        </ul>
+      </article>
+
+      <article>
+        <h1>alert()<br />prompt()<br />confirm()</h1>
+      </article>
+
+      <article>
+        <img src="./icons/alert.png" alt="" />
+      </article>
+      <article>
+        <img src="./icons/alert-output.png" alt="" />
+      </article>
+
+      <article>
+        <h1>Import Protocols</h1>
+      </article>
+
+      <article>
+        <h1>AsyncLocalStorage</h1>
+        <p>Really cool new API</p>
+      </article>
+
+      <article>
+        <img src="./icons/als.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/ryan-async.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/async-context.png" alt="" />
+      </article>
+
+      <article>
+        <h1>Packages</h1>
+        <p>Super Fast</p>
+      </article>
+
+      <article>
+        <h1>import { DOMParser, parseHTML } from 'linkedom/worker';</h1>
+        <p>JSDom Alternative. Works everywhere</p>
+      </article>
+
+      <article>
+        <h1>HTMLRewriter</h1>
+        <ul>
+          <li>Cloudflare Invented</li>
+          <li>Re-implemented everywhere</li>
+          <li>Not a standard</li>
+        </ul>
+      </article>
+
+      <article>
+        <img src="./icons/rewriter.png" alt="" />
+      </article>
+
+      <article>
+        <img src="./icons/worker-tools.png" alt="" />
+        <a href="https://github.com/worker-tools" target="_blank"
+          >worker-tools</a
+        >
+      </article>
+      <article>
+        <h1>Filesystem</h1>
+        <p>No standard FS API</p>
+        <p>whatwg/fs maybe?</p>
+      </article>
+
+      <article>
+        <h1>So much more!</h1>
+      </article>
+
+      <article>
+        <h1>This ins't write once work everywhere</h1>
+        <p>At least not yet...</p>
+      </article>
+
+      <article>
+        <h2>
+          It is a set of standardized APIs that allow us to create
+          interchangeable building blocks.
+        </h2>
+        <p>Servers 🤝 Browsers</p>
+      </article>
+
+      <article>
+        <h1>Thanks</h1>
+        <p>@wesbos</p>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+var r=class{warn(e,...o){throw new Error("Not implmeneted!")}info(e,...o){throw new Error("Not implmeneted!")}error(e,...o){throw new Error("Not implmeneted!")}table(e,...o){throw new Error("Not implmeneted!")}};var a=class extends r{info(){}warn(){}error(){}table(){}};var L=new a;export{L as a};

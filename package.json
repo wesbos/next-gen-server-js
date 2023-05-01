@@ -1,0 +1,23 @@
+{
+  "name": "syntax-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "slides.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "vite . --port 6969",
+    "build": "vite build --out-dir docs --base=/next-gen-server-js/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "postcss-nesting": "^11.2.2",
+    "three": "^0.151.3",
+    "three.js": "^0.77.1",
+    "vanta": "^0.5.24",
+    "vite": "^3.1.8"
+  }
+}
