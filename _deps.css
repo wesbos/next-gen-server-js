@@ -3,6 +3,10 @@ html {
   --yellow: #ffc600;
 }
 
+* {
+  box-sizing: border-box ;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -81,9 +85,11 @@ body {
     }
   }
   & > * {
-    display: block;
+    /* display: flex;
     clear: both;
     flex-wrap: wrap;
+    place-items: center;
+    gap: 20px; */
   }
   & > img {
     min-width: 0;
@@ -143,6 +149,7 @@ body {
   display: flex;
   transform: translate(0);
   z-index: 10;
+  gap: 100px;
 }
 .slides > article.next {
   display: flex;
@@ -197,10 +204,6 @@ h1 {
 
 h2 {
   font-size: 45px;
-  line-height: 45px;
-
-  bottom: 150px;
-
   padding: 0;
   margin: 0;
   font-weight: 600;

@@ -6,8 +6,8 @@
     <script type="module" src="./slides.js"></script>
     <link href="./styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="https://fav.farm/👨‍💻" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script> -->
+    <script src="./p5.min.js"></script>
     <script type="module" src="./go.ts"></script>
   </head>
 
@@ -59,27 +59,63 @@
       </article>
 
       <article>
-        <img src="./icons/node.png" />
-        <h3>Node.js</h3>
-        <img src="./icons/v8.png" alt="" />
+        <div class="columns">
+          <div>
+            <img src="./icons/node.png" />
+            <h3>Node.js</h3>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/v8.png" alt="" />
+        </div>
       </article>
 
       <article>
-        <img src="./icons/deno.svg" />
-        <h3>Deno</h3>
-        <img src="./icons/v8.png" alt="" />
+        <div class="columns">
+          <div>
+            <img src="./icons/deno.svg" />
+            <h3>Deno</h3>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/v8.png" alt="" />
+        </div>
       </article>
 
       <article>
-        <img src="./icons/cloudflare.jpg" />
-        <h3>Cloudflare Workers</h3>
-        <img src="./icons/v8.jpg" alt="" />
+        <div class="columns">
+          <div>
+            <img src="./icons/cloudflare.jpg" />
+            <h3>Cloudflare<br />Workers</h3>
+            <p class="small">[Vercel Edge]</p>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/v8.png" alt="" />
+        </div>
       </article>
 
-      <article class="grid">
+      <article>
+        <div class="columns">
+          <div>
+            <img src="./icons/fastly.png" />
+            <h3>Fastly<br />Compute<br />@edge</h3>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/spidermonkey.png" alt="" />
+        </div>
+      </article>
+      <article>
+        <div class="columns">
+          <div>
+            <img src="./icons/alibaba.png" />
+            <h3>Alibaba<br />Edge<br />Comppute</h3>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/v8.png" alt="" />
+        </div>
+      </article>
+
+      <article>
         <img src="./icons/bloomberg.png" />
         <img src="./icons/bytedance.png" />
-        <img src="./icons/alibaba.png" />
       </article>
 
       <article>
@@ -88,17 +124,23 @@
 
       <article>
         <h2>3 Browser JS Runtimes</h2>
-        <img src="./icons/chrome.svg" />
-        <img src="./icons/firefox.png" />
-        <img src="./icons/safari.png" />
+        <div class="grid">
+          <img src="./icons/chrome.svg" />
+          <img src="./icons/firefox.png" />
+          <img src="./icons/safari.png" />
+        </div>
       </article>
 
       <article>
-        <h2>4+ Server JS Runtimes</h2>
-        <img src="./icons/node.png" />
-        <img src="./icons/deno.svg" />
-        <img src="./icons/cloudflare.jpg" />
-        <img src="./icons/bun.svg" />
+        <h2>6+ Server JS Runtimes</h2>
+        <div class="grid">
+          <img src="./icons/node.png" />
+          <img src="./icons/deno.svg" />
+          <img src="./icons/cloudflare.jpg" />
+          <img src="./icons/bun.svg" />
+          <img src="./icons/fastly.png" />
+          <img src="./icons/alibaba.png" />
+        </div>
       </article>
 
       <article>
@@ -167,18 +209,6 @@
       </article>
 
       <article>
-        <div class="build">
-          <h2>What is TypeScript?</h2>
-          <p>TypeScript is JavaScript with a Type system added on top.</p>
-          <p>
-            It's not really a new language, it's just JavaScript plus some
-            descriptions about what your data looks like.
-          </p>
-          <p>They really should have called it DescriptiveJavaScript!</p>
-        </div>
-      </article>
-
-      <article>
         <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
         <p class="build">well, ya. That's the idea for the future at least!</p>
       </article>
@@ -189,19 +219,31 @@
 
       <article>
         <h2>Web Standards</h2>
-        <div>
+        <div class="grid">
           <div>
-            <img src="./icons/tc39.svg" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="./icons/tc39.svg"
+              alt=""
+            />
             <p>TC39</p>
             <p>Async + Await, esm, const, arrow functions</p>
           </div>
           <div>
-            <img src="./icons/w3c.png" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="./icons/w3c.png"
+              alt=""
+            />
             <p>W3C</p>
             <p>WebRTC, Streams API, Web Components</p>
           </div>
           <div>
-            <img src="./icons/whatwg.png" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="./icons/whatwg.png"
+              alt=""
+            />
             <p>WHATWG</p>
             <p>Fetch, Service Workers, Resize Observer</p>
           </div>
@@ -209,11 +251,11 @@
       </article>
 
       <article>
-        <img src="./icons/node-fetch.png" alt="" />
+        <img class="fit" src="./icons/node-fetch.png" alt="" />
       </article>
 
       <article>
-        <img src="./icons/fetch-standard.png" alt="" />
+        <img class="fit" src="./icons/fetch-standard.png" alt="" />
       </article>
 
       <article>
@@ -241,13 +283,13 @@
         <img src="./icons/req2.png" alt="" />
       </article>
       <article>
-        <img src="./icons/requests.png" alt="" />
+        <img class="fit" src="./icons/requests.png" alt="" />
       </article>
 
       <article>
         <h1>Node</h1>
         <p>Not Native, But:</p>
-        <p>Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
+        <p>Hono.js, Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
       </article>
 
       <article>
@@ -256,14 +298,14 @@
       </article>
 
       <article>
-        <img src="./icons/streams.png" alt="" />
+        <img class="fit" src="./icons/streams.png" alt="" />
       </article>
       <article>
-        <img src="./icons/abort.png" alt="" />
+        <img class="fit" src="./icons/abort.png" alt="" />
       </article>
 
       <article>
-        <img src="./icons/abort-server.png" alt="" />
+        <img class="fit" src="./icons/abort-server.png" alt="" />
       </article>
 
       <article>
@@ -330,12 +372,12 @@
         <img src="./icons/alert-output.png" alt="" />
       </article>
 
-      <article>
+      <!-- <article>
         <h1>Import Protocols</h1>
-      </article>
+      </article> -->
 
       <article>
-        <h1>AsyncLocalStorage</h1>
+        <h1>Async<br />Local<br />Storage</h1>
         <p>Really cool new API</p>
       </article>
 
@@ -357,7 +399,7 @@
       </article>
 
       <article>
-        <h1>import { DOMParser, parseHTML } from 'linkedom/worker';</h1>
+        <h3>import { DOMParser, parseHTML } from 'linkedom/worker';</h3>
         <p>JSDom Alternative. Works everywhere</p>
       </article>
 
@@ -376,9 +418,9 @@
 
       <article>
         <img src="./icons/worker-tools.png" alt="" />
-        <a href="https://github.com/worker-tools" target="_blank"
+        <!-- <a href="https://github.com/worker-tools" target="_blank"
           >worker-tools</a
-        >
+        > -->
       </article>
       <article>
         <h1>Filesystem</h1>

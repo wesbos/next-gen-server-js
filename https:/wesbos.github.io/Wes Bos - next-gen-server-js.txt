@@ -1,0 +1,1 @@
+Slides are browser based. Must run in chrome. I will connect my own computer. https://wesbos.github.io/next-gen-server-js/#1

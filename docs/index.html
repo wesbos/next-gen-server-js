@@ -6,11 +6,11 @@
     
     
     <link rel="icon" href="https://fav.farm/👨‍💻" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script> -->
+    <script src="./p5.min.js"></script>
     
-    <script type="module" crossorigin src="/next-gen-server-js/assets/index.b204f0d7.js"></script>
-    <link rel="stylesheet" href="/next-gen-server-js/assets/index.ac6b9705.css">
+    <script type="module" crossorigin src="/next-gen-server-js/assets/index.3e060e81.js"></script>
+    <link rel="stylesheet" href="/next-gen-server-js/assets/index.f4e91727.css">
   </head>
 
   <body>
@@ -61,27 +61,63 @@
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
-        <h3>Node.js</h3>
-        <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
+            <h3>Node.js</h3>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        </div>
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
-        <h3>Deno</h3>
-        <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
+            <h3>Deno</h3>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        </div>
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
-        <h3>Cloudflare Workers</h3>
-        <img src="./icons/v8.jpg" alt="" />
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
+            <h3>Cloudflare<br />Workers</h3>
+            <p class="small">[Vercel Edge]</p>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        </div>
       </article>
 
-      <article class="grid">
+      <article>
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/fastly.2af8f59f.png" />
+            <h3>Fastly<br />Compute<br />@edge</h3>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/spidermonkey.8303ed62.png" alt="" />
+        </div>
+      </article>
+      <article>
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/alibaba.99a834f3.png" />
+            <h3>Alibaba<br />Edge<br />Comppute</h3>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        </div>
+      </article>
+
+      <article>
         <img src="/next-gen-server-js/assets/bloomberg.4ffcc6f7.png" />
         <img src="/next-gen-server-js/assets/bytedance.039c017e.png" />
-        <img src="/next-gen-server-js/assets/alibaba.99a834f3.png" />
       </article>
 
       <article>
@@ -90,17 +126,23 @@
 
       <article>
         <h2>3 Browser JS Runtimes</h2>
-        <img src="/next-gen-server-js/assets/chrome.c24bb399.svg" />
-        <img src="/next-gen-server-js/assets/firefox.a215097d.png" />
-        <img src="/next-gen-server-js/assets/safari.9d723a4b.png" />
+        <div class="grid">
+          <img src="/next-gen-server-js/assets/chrome.c24bb399.svg" />
+          <img src="/next-gen-server-js/assets/firefox.a215097d.png" />
+          <img src="/next-gen-server-js/assets/safari.9d723a4b.png" />
+        </div>
       </article>
 
       <article>
-        <h2>4+ Server JS Runtimes</h2>
-        <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
-        <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
-        <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
-        <img src="/next-gen-server-js/assets/bun.6395a2d7.svg" />
+        <h2>6+ Server JS Runtimes</h2>
+        <div class="grid">
+          <img src="/next-gen-server-js/assets/node.c716a3d9.png" />
+          <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
+          <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
+          <img src="/next-gen-server-js/assets/bun.6395a2d7.svg" />
+          <img src="/next-gen-server-js/assets/fastly.2af8f59f.png" />
+          <img src="/next-gen-server-js/assets/alibaba.99a834f3.png" />
+        </div>
       </article>
 
       <article>
@@ -169,18 +211,6 @@
       </article>
 
       <article>
-        <div class="build">
-          <h2>What is TypeScript?</h2>
-          <p>TypeScript is JavaScript with a Type system added on top.</p>
-          <p>
-            It's not really a new language, it's just JavaScript plus some
-            descriptions about what your data looks like.
-          </p>
-          <p>They really should have called it DescriptiveJavaScript!</p>
-        </div>
-      </article>
-
-      <article>
         <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
         <p class="build">well, ya. That's the idea for the future at least!</p>
       </article>
@@ -191,19 +221,31 @@
 
       <article>
         <h2>Web Standards</h2>
-        <div>
+        <div class="grid">
           <div>
-            <img src="/next-gen-server-js/assets/tc39.de2fa905.svg" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="/next-gen-server-js/assets/tc39.de2fa905.svg"
+              alt=""
+            />
             <p>TC39</p>
             <p>Async + Await, esm, const, arrow functions</p>
           </div>
           <div>
-            <img src="./icons/w3c.png" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="/next-gen-server-js/assets/w3c.2c649c57.png"
+              alt=""
+            />
             <p>W3C</p>
             <p>WebRTC, Streams API, Web Components</p>
           </div>
           <div>
-            <img src="./icons/whatwg.png" alt="" />
+            <img
+              style="height: 200px; object-fit: contain; width: auto"
+              src="/next-gen-server-js/assets/whatwg.02c8530d.png"
+              alt=""
+            />
             <p>WHATWG</p>
             <p>Fetch, Service Workers, Resize Observer</p>
           </div>
@@ -211,11 +253,11 @@
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/node-fetch.891221d5.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/node-fetch.891221d5.png" alt="" />
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/fetch-standard.ac2b2be7.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/fetch-standard.ac2b2be7.png" alt="" />
       </article>
 
       <article>
@@ -243,13 +285,13 @@
         <img src="/next-gen-server-js/assets/req2.560305ef.png" alt="" />
       </article>
       <article>
-        <img src="/next-gen-server-js/assets/requests.a26b3df4.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/requests.a26b3df4.png" alt="" />
       </article>
 
       <article>
         <h1>Node</h1>
         <p>Not Native, But:</p>
-        <p>Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
+        <p>Hono.js, Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
       </article>
 
       <article>
@@ -258,14 +300,14 @@
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/streams.b97c6fc4.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/streams.b97c6fc4.png" alt="" />
       </article>
       <article>
-        <img src="/next-gen-server-js/assets/abort.4accac27.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/abort.4accac27.png" alt="" />
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/abort-server.e87a3f36.png" alt="" />
+        <img class="fit" src="/next-gen-server-js/assets/abort-server.e87a3f36.png" alt="" />
       </article>
 
       <article>
@@ -332,12 +374,12 @@
         <img src="/next-gen-server-js/assets/alert-output.59dde5ca.png" alt="" />
       </article>
 
-      <article>
+      <!-- <article>
         <h1>Import Protocols</h1>
-      </article>
+      </article> -->
 
       <article>
-        <h1>AsyncLocalStorage</h1>
+        <h1>Async<br />Local<br />Storage</h1>
         <p>Really cool new API</p>
       </article>
 
@@ -359,7 +401,7 @@
       </article>
 
       <article>
-        <h1>import { DOMParser, parseHTML } from 'linkedom/worker';</h1>
+        <h3>import { DOMParser, parseHTML } from 'linkedom/worker';</h3>
         <p>JSDom Alternative. Works everywhere</p>
       </article>
 
@@ -378,9 +420,9 @@
 
       <article>
         <img src="/next-gen-server-js/assets/worker-tools.d43d8ebc.png" alt="" />
-        <a href="https://github.com/worker-tools" target="_blank"
+        <!-- <a href="https://github.com/worker-tools" target="_blank"
           >worker-tools</a
-        >
+        > -->
       </article>
       <article>
         <h1>Filesystem</h1>

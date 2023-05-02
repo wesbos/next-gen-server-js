@@ -9,18 +9,30 @@
   --i: 0.05;
   --noCalc: calc(var(--i) * 2);
   --fogColor: hsl(calc(243 + var(--i) * 255), 100%, 68%);
-  --sickGradient: radial-gradient(farthest-corner circle at 50% 115% in oklch,
-      oklch(80% .3 34) 0%, oklch(90% .3 200) 100%);
-  --coolGradient: linear-gradient(115deg,
-      var(--color1) 11% 11%,
-      var(--color2) 101% 101%,
-      var(--color3) 100%);
+  --sickGradient: radial-gradient(
+    farthest-corner circle at 50% 115% in oklch,
+    oklch(80% 0.3 34) 0%,
+    oklch(90% 0.3 200) 100%
+  );
+  --coolGradient: linear-gradient(
+    115deg,
+    var(--color1) 11% 11%,
+    var(--color2) 101% 101%,
+    var(--color3) 100%
+  );
   --gradColor1: hsl(50, 100%, 68%);
   --gradColor2: hsl(200, 100%, 68%);
   /* --rainbow: linear-gradient(to right in hsl longer hue, red 0% 100%); */
   --startColor: hsl(0, 100%, 66%);
-  --rainbow: linear-gradient(to right in hsl longer hue, var(--startColor) 0% 100%);
-  --gradient: linear-gradient(125deg, var(--gradColor1) 0%, var(--gradColor2) 100%);
+  --rainbow: linear-gradient(
+    to right in hsl longer hue,
+    var(--startColor) 0% 100%
+  );
+  --gradient: linear-gradient(
+    125deg,
+    var(--gradColor1) 0%,
+    var(--gradColor2) 100%
+  );
   --yellow: #ffc600;
 }
 
@@ -101,7 +113,8 @@ h6 {
   background-attachment: fixed;
 }
 
-p, li {
+p,
+li {
   font-family: "Ika VAR";
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -126,5 +139,51 @@ img.fit {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  max-height: none;
 }
 
+.slides > article.current.grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px !important;
+  place-items: center;
+  width: 100%;
+  justify-content: center;
+  & img {
+    max-width: 200px;
+  }
+  & h1,
+  & h2 {
+    grid-column: 1 / -1;
+    height: 100%;
+  }
+  & > * {
+    display: initial;
+  }
+}
+
+/*
+  <article>
+    <img>
+  </article>
+*/
+article:has(img:only-child) {
+  padding: 0;
+  & img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+/*
+  <article>
+    <h2></h2>
+    <img>
+  </article>
+*/
+article:has(h2 + img):not(:has(:nth-child(3))) {
+  gap: 50px;
+}

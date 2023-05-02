@@ -32,39 +32,38 @@ function hexToNumber(hex = '#ffc600') {
   return `0x${parseInt(hex.replace("#", ""), 16).toString(16)}`;
 }
 
-FOG({
-  el: "#fog",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  blurFactor: 0.8,
-  highlightColor: 0x6900ff,
-  midtoneColor: 0xff7ee9,
-  lowlightColor: 0xbada55,
-  lowlightColor: 0xffc600,
-  baseColor: 0x2f52d9,
-  speed: 2.5,
-});
+// FOG({
+//   el: "#fog",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.0,
+//   minWidth: 200.0,
+//   blurFactor: 0.8,
+//   highlightColor: 0x6900ff,
+//   midtoneColor: 0xff7ee9,
+//   // lowlightColor: 0xbada55,
+//   lowlightColor: 0xffc600,
+//   baseColor: 0x2f52d9,
+//   speed: 2.5,
+// });
 
-console.log(hexToNumber(cssVariables["color-vanilla"]));
 
-TRUNK({
-  el: "#trunk",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 500.0,
-  minWidth: 500.0,
-  scale: 2.0,
-  scaleMobile: 1.0,
-  // color: 0xff009e,
-  color: 0x67655a,
-  backgroundColor: `transparent`,
-  spacing: 8.0,
-  chaos: 1,
-});
+// TRUNK({
+//   el: "#trunk",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 500.0,
+//   minWidth: 500.0,
+//   scale: 2.0,
+//   scaleMobile: 1.0,
+//   // color: 0xff009e,
+//   color: 0x67655a,
+//   backgroundColor: `transparent`,
+//   spacing: 8.0,
+//   chaos: 1,
+// });
 
 // Convert the canvas to an image
 async function waitForSelector<T extends Element>(selector) {
