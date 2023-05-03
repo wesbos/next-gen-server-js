@@ -49,21 +49,21 @@ function hexToNumber(hex = '#ffc600') {
 // });
 
 
-// TRUNK({
-//   el: "#trunk",
-//   mouseControls: true,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 500.0,
-//   minWidth: 500.0,
-//   scale: 2.0,
-//   scaleMobile: 1.0,
-//   // color: 0xff009e,
-//   color: 0x67655a,
-//   backgroundColor: `transparent`,
-//   spacing: 8.0,
-//   chaos: 1,
-// });
+TRUNK({
+  el: "#trunk",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 500.0,
+  minWidth: 500.0,
+  scale: 2.0,
+  scaleMobile: 1.0,
+  // color: 0xff009e,
+  color: 0x67655a,
+  backgroundColor: `transparent`,
+  spacing: 8.0,
+  chaos: 1,
+});
 
 // Convert the canvas to an image
 async function waitForSelector<T extends Element>(selector) {

@@ -47,6 +47,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: "Ika VAR";
+  overflow: hidden;
 }
 
 body.firefox {
@@ -134,6 +135,9 @@ h2 {
 h3 {
   font-size: 150px;
 }
+h4 {
+  font-size: 70px;
+}
 
 img.fit {
   width: 100%;
@@ -186,4 +190,10 @@ article:has(img:only-child) {
 */
 article:has(h2 + img):not(:has(:nth-child(3))) {
   gap: 50px;
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  gap: 100px;
 }

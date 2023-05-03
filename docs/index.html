@@ -9,8 +9,8 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.151.3/three.min.js"></script> -->
     <script src="./p5.min.js"></script>
     
-    <script type="module" crossorigin src="/next-gen-server-js/assets/index.3e060e81.js"></script>
-    <link rel="stylesheet" href="/next-gen-server-js/assets/index.f4e91727.css">
+    <script type="module" crossorigin src="/next-gen-server-js/assets/index.585261e6.js"></script>
+    <link rel="stylesheet" href="/next-gen-server-js/assets/index.cd2165b1.css">
   </head>
 
   <body>
@@ -28,10 +28,18 @@
         <p class="sub">@wesbos.com on bluesky</p>
       </article>
       <article class="first">
-        <img
-          src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
-        />
-        <p>syntax.fm × @syntaxfm</p>
+        <div class="columns">
+          <div>
+            <h2>Web<br />Dev<br />Courses</h2>
+          </div>
+          <div>+</div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
+            />
+            <p>syntax.fm × @syntaxfm × sentry</p>
+          </div>
+        </div>
       </article>
 
       <article>
@@ -49,6 +57,11 @@
           .browsers img {
             max-width: 100px;
             margin: 0 1rem;
+          }
+          .browsers p {
+            display: grid;
+            place-items: center;
+            grid-auto-flow: column;
           }
         </style>
         <p>
@@ -76,6 +89,7 @@
           <div>
             <img src="/next-gen-server-js/assets/deno.ce7e91d4.svg" />
             <h3>Deno</h3>
+            <p class="small">[Deno Deploy, Netlify Edge, Supabase Edge]</p>
           </div>
           <h3>→</h3>
           <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
@@ -93,12 +107,22 @@
           <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
         </div>
       </article>
+      <article>
+        <div class="columns">
+          <div>
+            <img src="/next-gen-server-js/assets/bun.6395a2d7.svg" />
+            <h3>Bun</h3>
+          </div>
+          <h3>→</h3>
+          <img src="/next-gen-server-js/assets/jsc.987c0559.jpg" alt="" />
+        </div>
+      </article>
 
       <article>
         <div class="columns">
           <div>
             <img src="/next-gen-server-js/assets/fastly.2af8f59f.png" />
-            <h3>Fastly<br />Compute<br />@edge</h3>
+            <h4>Fastly<br />Compute<br />@edge</h4>
           </div>
           <h3>→</h3>
           <img src="/next-gen-server-js/assets/spidermonkey.8303ed62.png" alt="" />
@@ -108,7 +132,7 @@
         <div class="columns">
           <div>
             <img src="/next-gen-server-js/assets/alibaba.99a834f3.png" />
-            <h3>Alibaba<br />Edge<br />Comppute</h3>
+            <h4>Alibaba<br />Edge<br />Compute</h4>
           </div>
           <h3>→</h3>
           <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
@@ -116,8 +140,10 @@
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/bloomberg.4ffcc6f7.png" />
-        <img src="/next-gen-server-js/assets/bytedance.039c017e.png" />
+        <div class="coloumns">
+          <img src="/next-gen-server-js/assets/bloomberg.4ffcc6f7.png" />
+          <img src="/next-gen-server-js/assets/bytedance.039c017e.png" />
+        </div>
       </article>
 
       <article>
@@ -151,6 +177,7 @@
 
       <article>
         <h1>WHY</h1>
+        <p>Why do we have so many runtimes?</p>
       </article>
 
       <article>
@@ -160,12 +187,18 @@
           <li>A push for Standard APIs</li>
           <li>ESM Spec</li>
           <li>Easy wins (dotenv, prompt, etc..)</li>
+          <li>A Joy to work with</li>
         </ul>
       </article>
 
       <article>
         <h2>Faster</h2>
-        <img src="/next-gen-server-js/assets/ryah.91766851.jpg" alt="" />
+        <ul class="build">
+          <li>"cold starts"</li>
+          <li>"Rust"</li>
+          <li>"WASM"</li>
+          <li>"Async"</li>
+        </ul>
       </article>
 
       <article>
@@ -191,7 +224,7 @@
       <article>
         <h2>Serverless Functions</h2>
         <ul class="build">
-          <li>Only Run when needed</li>
+          <li>Only Run in short bursts when needed</li>
           <li>Scale up by running more</li>
           <li>Pay for what you need</li>
         </ul>
@@ -211,7 +244,7 @@
       </article>
 
       <article>
-        <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
+        <h2>What's a poor dev to do? Support 6+ Runtimes?!</h2>
         <p class="build">well, ya. That's the idea for the future at least!</p>
       </article>
 
@@ -295,7 +328,7 @@
       </article>
 
       <article>
-        <h1>Streams</h1>
+        <h1>Web Streams</h1>
         <p>Blow Chunks as you have em</p>
       </article>
 
@@ -384,7 +417,7 @@
       </article>
 
       <article>
-        <img src="/next-gen-server-js/assets/als.40681a80.png" alt="" />
+        <img src="/next-gen-server-js/assets/als.a592218e.png" alt="" />
       </article>
 
       <article>
@@ -440,11 +473,15 @@
       </article>
 
       <article>
-        <h2>
+        <h3>
           It is a set of standardized APIs that allow us to create
           interchangeable building blocks.
-        </h2>
+        </h3>
         <p>Servers 🤝 Browsers</p>
+      </article>
+
+      <article>
+        <h3>Build for Standards, target everything</h3>
       </article>
 
       <article>

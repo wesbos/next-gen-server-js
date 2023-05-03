@@ -26,10 +26,18 @@
         <p class="sub">@wesbos.com on bluesky</p>
       </article>
       <article class="first">
-        <img
-          src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
-        />
-        <p>syntax.fm × @syntaxfm</p>
+        <div class="columns">
+          <div>
+            <h2>Web<br />Dev<br />Courses</h2>
+          </div>
+          <div>+</div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
+            />
+            <p>syntax.fm × @syntaxfm × sentry</p>
+          </div>
+        </div>
       </article>
 
       <article>
@@ -47,6 +55,11 @@
           .browsers img {
             max-width: 100px;
             margin: 0 1rem;
+          }
+          .browsers p {
+            display: grid;
+            place-items: center;
+            grid-auto-flow: column;
           }
         </style>
         <p>
@@ -74,6 +87,7 @@
           <div>
             <img src="./icons/deno.svg" />
             <h3>Deno</h3>
+            <p class="small">[Deno Deploy, Netlify Edge, Supabase Edge]</p>
           </div>
           <h3>→</h3>
           <img src="./icons/v8.png" alt="" />
@@ -91,12 +105,22 @@
           <img src="./icons/v8.png" alt="" />
         </div>
       </article>
+      <article>
+        <div class="columns">
+          <div>
+            <img src="./icons/bun.svg" />
+            <h3>Bun</h3>
+          </div>
+          <h3>→</h3>
+          <img src="./icons/jsc.jpg" alt="" />
+        </div>
+      </article>
 
       <article>
         <div class="columns">
           <div>
             <img src="./icons/fastly.png" />
-            <h3>Fastly<br />Compute<br />@edge</h3>
+            <h4>Fastly<br />Compute<br />@edge</h4>
           </div>
           <h3>→</h3>
           <img src="./icons/spidermonkey.png" alt="" />
@@ -106,7 +130,7 @@
         <div class="columns">
           <div>
             <img src="./icons/alibaba.png" />
-            <h3>Alibaba<br />Edge<br />Comppute</h3>
+            <h4>Alibaba<br />Edge<br />Compute</h4>
           </div>
           <h3>→</h3>
           <img src="./icons/v8.png" alt="" />
@@ -114,8 +138,10 @@
       </article>
 
       <article>
-        <img src="./icons/bloomberg.png" />
-        <img src="./icons/bytedance.png" />
+        <div class="coloumns">
+          <img src="./icons/bloomberg.png" />
+          <img src="./icons/bytedance.png" />
+        </div>
       </article>
 
       <article>
@@ -149,6 +175,7 @@
 
       <article>
         <h1>WHY</h1>
+        <p>Why do we have so many runtimes?</p>
       </article>
 
       <article>
@@ -158,12 +185,18 @@
           <li>A push for Standard APIs</li>
           <li>ESM Spec</li>
           <li>Easy wins (dotenv, prompt, etc..)</li>
+          <li>A Joy to work with</li>
         </ul>
       </article>
 
       <article>
         <h2>Faster</h2>
-        <img src="./icons/ryah.jpg" alt="" />
+        <ul class="build">
+          <li>"cold starts"</li>
+          <li>"Rust"</li>
+          <li>"WASM"</li>
+          <li>"Async"</li>
+        </ul>
       </article>
 
       <article>
@@ -189,7 +222,7 @@
       <article>
         <h2>Serverless Functions</h2>
         <ul class="build">
-          <li>Only Run when needed</li>
+          <li>Only Run in short bursts when needed</li>
           <li>Scale up by running more</li>
           <li>Pay for what you need</li>
         </ul>
@@ -209,7 +242,7 @@
       </article>
 
       <article>
-        <h2>What's a poor dev to do? Support 4+ Runtimes?!</h2>
+        <h2>What's a poor dev to do? Support 6+ Runtimes?!</h2>
         <p class="build">well, ya. That's the idea for the future at least!</p>
       </article>
 
@@ -293,7 +326,7 @@
       </article>
 
       <article>
-        <h1>Streams</h1>
+        <h1>Web Streams</h1>
         <p>Blow Chunks as you have em</p>
       </article>
 
@@ -438,11 +471,15 @@
       </article>
 
       <article>
-        <h2>
+        <h3>
           It is a set of standardized APIs that allow us to create
           interchangeable building blocks.
-        </h2>
+        </h3>
         <p>Servers 🤝 Browsers</p>
+      </article>
+
+      <article>
+        <h3>Build for Standards, target everything</h3>
       </article>
 
       <article>
