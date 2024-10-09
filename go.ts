@@ -89,7 +89,6 @@ function wait(ms) {
 }
 
 async function paint(canvas) {
-  console.log('painting');
   const image = canvas.toDataURL();
   document.documentElement.style.setProperty(
     "--image",
@@ -100,7 +99,6 @@ async function paint(canvas) {
 
 
 async function paintBlob(canvas) {
-  console.log('painting');
   // const image = canvas.toDataURL();
   canvas.toBlob(async (blob) => {
     // console.count(blob);
@@ -111,8 +109,5 @@ async function paintBlob(canvas) {
     );
     requestAnimationFrame(() => paintBlob(canvas));
   });
-
 }
-
 go();
-
