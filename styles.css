@@ -146,6 +146,11 @@ img.fit {
   max-height: none;
 }
 
+img.wide {
+  width: 100%;
+  height: auto;
+}
+
 .slides > article.current.grid,
 .grid {
   display: grid;
@@ -162,7 +167,7 @@ img.fit {
     grid-column: 1 / -1;
     height: 100%;
   }
-  & > * {
+  & > *:not(style) {
     display: initial;
   }
 }
@@ -172,7 +177,7 @@ img.fit {
     <img>
   </article>
 */
-article:has(img:only-child) {
+article:has(> img:only-child) {
   padding: 0;
   & img {
     width: 100%;
@@ -192,8 +197,22 @@ article:has(h2 + img):not(:has(:nth-child(3))) {
   gap: 50px;
 }
 
+/*
+  Selects Slide Layouts that look like this:
+  <article>
+    <h#></h#>
+  </article>
+*/
+article:has(> :is(h1, h2, h3, h4, h4, h5, h6):only-child) {
+  padding: 5rem;
+}
+
 .columns {
   display: flex;
   align-items: center;
   gap: 100px;
+}
+
+.balance {
+  text-wrap: balance;
 }
