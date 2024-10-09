@@ -10,7 +10,7 @@
     <script src="./p5.min.js"></script>
     
     <script type="module" crossorigin src="/next-gen-server-js/assets/index.585261e6.js"></script>
-    <link rel="stylesheet" href="/next-gen-server-js/assets/index.cd2165b1.css">
+    <link rel="stylesheet" href="/next-gen-server-js/assets/index.2b9e5b42.css">
   </head>
 
   <body>
@@ -45,6 +45,7 @@
       <article>
         <h1>What is this talk about?</h1>
         <p class="sub">Server Side JavaScript</p>
+        <!-- IF you are building an app with server JS, whether its an API, a React App, these are the things you wannt to pay attention to.  -->
       </article>
 
       <article>
@@ -101,7 +102,7 @@
           <div>
             <img src="/next-gen-server-js/assets/cloudflare.8c06e3a1.jpg" />
             <h3>Cloudflare<br />Workers</h3>
-            <p class="small">[Vercel Edge]</p>
+            <p class="small">[Workerd]</p>
           </div>
           <h3>→</h3>
           <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
@@ -136,6 +137,21 @@
           </div>
           <h3>→</h3>
           <img src="/next-gen-server-js/assets/v8.6966a77a.png" alt="" />
+        </div>
+      </article>
+      <article>
+        <div class="columns">
+          <div>
+            <img
+              src="https://avatars.githubusercontent.com/u/3299148?s=248&v=4"
+            />
+            <h4>llrt</h4>
+          </div>
+          <h3>→</h3>
+          <img
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEjzb7KVdSlhe4cl6D_-bUvhl0FxC_P8LhJVUAS1dGCqz01RL9kpFJHu2Eoeb6KEoIRt1hkaK_cVS3N82ozT5D_ySSRb4k-keTA25LyrwUwR7oQMorS-zPDnBrlmVMHObh7DqnVJUCSZt7-_3kqlYBsBrWDU98IQo_CdpNpr6bmdF7pq-4S9YTjUU24X=w400-h400"
+            alt=""
+          />
         </div>
       </article>
 
@@ -176,6 +192,23 @@
       </article>
 
       <article>
+        <h2>
+          The next generation of server JS we write will be standards based.
+        </h2>
+      </article>
+      <article>
+        <h3>
+          Not only does this mean we can run it anywhere, but importantly means
+          we the layers are highly composable.
+        </h3>
+      </article>
+
+      <article>
+        <h1>Should you care?</h1>
+        <p>maybe</p>
+      </article>
+
+      <article>
         <h1>WHY</h1>
         <p>Why do we have so many runtimes?</p>
       </article>
@@ -186,13 +219,13 @@
           <li>TS out of the Box</li>
           <li>A push for Standard APIs</li>
           <li>ESM Spec</li>
-          <li>Easy wins (dotenv, prompt, etc..)</li>
+          <li>Easy wins (dotenv, prompt, JSX, etc..)</li>
           <li>A Joy to work with</li>
         </ul>
       </article>
 
       <article>
-        <h2>Faster</h2>
+        <h2>Faster (Cheaper?)</h2>
         <ul class="build">
           <li>"cold starts"</li>
           <li>"Rust"</li>
@@ -202,8 +235,26 @@
       </article>
 
       <article>
+        <h2>Cheaper?</h2>
+        <ul>
+          <li>At scale, faster is a lot</li>
+          <li>CPU Time vs Wall Time</li>
+        </ul>
+        <!-- <p>
+          TODO: There has been lots of talk about $5 Servers vs outragous SaaS
+          Bills lately.
+        </p>
+        <p>
+          I'm not here to tell you that one type of server is cheaper than
+          another. I am here to tell you that at scale, cutting your compute
+          down by 20% can mean hundreds of thousands, if not not millions of
+          dollars saved.
+        </p> -->
+      </article>
+
+      <article>
         <h2>Stronger</h2>
-        <img src="/next-gen-server-js/assets/security.3582845a.jpg" class="wide" />
+        <img src="/next-gen-server-js/assets/security.3582845a.jpg" />
       </article>
 
       <article>
@@ -236,16 +287,16 @@
         <ul class="build">
           <li>Run closer to your user</li>
           <li>Can run in-between / intercept requests</li>
-          <li>Limited API</li>
-          <li>Not 100% node compat</li>
-          <li>CPU Time vs Wall Time</li>
+          <li><strike>Limited API</strike></li>
+          <li>Not 100% node compat (close!)</li>
         </ul>
+        <!-- Notes: These lines are blurred.. -->
         <!-- TODO Examples -->
       </article>
 
       <article>
         <h2>What's a poor dev to do? Support 6+ Runtimes?!</h2>
-        <p class="build">well, ya. That's the idea for the future at least!</p>
+        <p class="build">well, ya. But also no.</p>
       </article>
 
       <article>
@@ -306,7 +357,7 @@
 
       <article>
         <h1>Fetch</h1>
-        <p>Request + Response are life</p>
+        <p>Web Request + Web Response are life</p>
       </article>
 
       <article>
@@ -317,14 +368,18 @@
         <h2>On the Server, we handle them!</h2>
         <img src="/next-gen-server-js/assets/req2.560305ef.png" alt="" />
       </article>
+
       <article>
-        <img class="fit" src="/next-gen-server-js/assets/requests.a26b3df4.png" alt="" />
+        <img src="/next-gen-server-js/assets/server-grid.679c7ba0.png" alt="" />
       </article>
 
       <article>
         <h1>Node</h1>
         <p>Not Native, But:</p>
-        <p>Hono.js, Fastify Plugin, Next.js Routes, Sveltekit, Astro + more</p>
+        <p class="balance">
+          Hono.js, H3, @whatwg-node/server, Fastify Plugin, Next.js Routes,
+          Sveltekit, Astro + more
+        </p>
       </article>
 
       <article>
@@ -429,8 +484,93 @@
       </article>
 
       <article>
-        <h1>Packages</h1>
-        <p>Super Fast</p>
+        <h1>Developer Ecosystem</h1>
+        <p>The tooling is standardizing on standards</p>
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/unjs.33b221eb.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <h1>unenv</h1>
+      </article>
+
+      <article>
+        <img class="fit" src="/next-gen-server-js/assets/unenv-cf.f0826209.png" alt="" />
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/unenv-apis.eb9eb75c.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <p>Deno, Bun, Cloudflare, Node</p>
+        <img src="/next-gen-server-js/assets/unenv-deno.caf54f2d.png" class="wide" />
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/hono.fe0ed368.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/nitro.ca99e92b.png" class="fit" />
+      </article>
+      <article>
+        <p>Think of these as standards based Express that can run anywhere.</p>
+        <p>HMR, Routing, Middlware, Caching, Web Sockets, Assets</p>
+      </article>
+      <article>
+        <img src="/next-gen-server-js/assets/h3.47aba8c6.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/srvx.0c34f844.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/vinxi.0cd23c72.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <h1>Vite + Nitro = Vinxi</h1>
+      </article>
+
+      <article>
+        <h3>Build your own Framework</h3>
+        <p>Any JS LIb + Standard Server = Metaframework</p>
+      </article>
+
+      <article>
+        <img src="/next-gen-server-js/assets/tanstack.576329a8.png" alt="" class="fit" />
+      </article>
+      <article>
+        <img src="/next-gen-server-js/assets/solid-start.25a9617a.png" alt="" class="fit" />
+      </article>
+
+      <!-- <article>
+        <h1>Solid Start / Tanstack Start</h1>
+        <p>Solid.js or React Tansack Router + Query</p>
+      </article> -->
+
+      <article>
+        <ul style="text-align: left">
+          <li>✅ Routing</li>
+          <li>✅ RPC</li>
+          <li>✅ Data Loaders</li>
+          <li>✅ Middleware</li>
+          <li>✅ API Endpoints</li>
+          <li>✅ Server Rendering</li>
+          <li>✅ Streaming</li>
+          <li>✅ caching</li>
+          <li>+ More.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Tanstack Start</h2>
+        <p>Client: Vite, Tanstack Query, Tanstack Router</p>
+        <p>Server: Vinxi → Nitro → H3 → srvx</p>
       </article>
 
       <article>
@@ -457,11 +597,11 @@
           >worker-tools</a
         > -->
       </article>
-      <article>
+      <!-- <article>
         <h1>Filesystem</h1>
         <p>No standard FS API</p>
         <p>whatwg/fs maybe?</p>
-      </article>
+      </article> -->
 
       <article>
         <h1>So much more!</h1>
@@ -474,14 +614,20 @@
 
       <article>
         <h3>
-          It is a set of standardized APIs that allow us to create
-          interchangeable building blocks.
+          It is a set of standardized APIs and an ecosystem of tools that work
+          together
         </h3>
-        <p>Servers 🤝 Browsers</p>
+        <!-- <p>Servers 🤝 Browsers</p> -->
       </article>
 
+      <!-- <article>
+        <p>
+          TODO: Add something here about how each of these standards and each of
+          these layers make for a powerful future web
+        </p>
+      </article> -->
       <article>
-        <h3>Build for Standards, target everything</h3>
+        <h3>Build for Standards, have it work everywhere</h3>
       </article>
 
       <article>
